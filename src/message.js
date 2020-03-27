@@ -1,5 +1,5 @@
 const getMessage = () => {
-    alert("Hola");
+    alert("Modo de desarrollo <3");
 }
 
 export {
