@@ -1,5 +1,5 @@
-import { getMessage } from './message';
-import './styles.scss';
-import './webpack.png';
+import { getMenu } from './js/message';
+import './sass/styles.scss';
+import './img/webpack.png';
 
-document.getElementById('btn').addEventListener('click', getMessage);
+document.getElementById('bars').addEventListener('click', getMenu);

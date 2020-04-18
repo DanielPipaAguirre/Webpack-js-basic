@@ -20,7 +20,7 @@
 }
 
 body {
-    background: #f7f7f7;
+    background: #0779e4;
     font-family: fantasy;
     margin: 0;
 }
@@ -49,6 +49,7 @@ button {
     padding: 0 60px;
     background: #fff;
     height: 56px;
+    position: relative;
     @include respond(small){
         grid-template-areas: "logo bars";
         padding: 0 30px;
@@ -67,11 +68,34 @@ button {
     &__icons {
         grid-area: icons;
         @include respond(small){
-            display: none;
+            background: #f4f4f4;;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: grid;
+            grid-auto-flow: column;
+            z-index: -1;
+            margin-top: 56px;
+            transition: .3s ease;
+            transform: translateY(-56px);
+        }
+        &.active {
+            transform: translateY(0px);
         }
         justify-self: flex-end;
-        i {
-            margin-left: 15px;
+        a {
+            i {
+                margin-left: 30px;
+                @include respond(small){
+                    margin: 0;
+                    padding: 20px 0;
+                }
+            }
+            @include respond(small){
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
         }
     }
     &__bars {
