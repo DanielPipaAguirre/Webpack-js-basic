@@ -18,7 +18,7 @@ module.exports = merge(commonConfig, {
                 ]
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.jpg|png|gif|wof|eot|ttf|svg|mp4|webm$/,
                 use: [
                     {
                         loader: 'file-loader',
